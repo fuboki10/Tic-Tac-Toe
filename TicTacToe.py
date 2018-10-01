@@ -1,4 +1,3 @@
-# Abdelrahman tarek tic tac toe project
 import random
 import os
 def clear(): 
