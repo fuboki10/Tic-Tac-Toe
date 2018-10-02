@@ -8,7 +8,7 @@ def clear():
 	# os.system('cls')
         
 def display_board(board):
-    	# clear screen before every update
+    # clear screen before every update
 	clear()
 	print()
 	print('   |   |')
