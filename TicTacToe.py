@@ -2,22 +2,27 @@ import random
 import os
 def clear(): 
   
+	# linux or os
     os.system('clear') 
-        
+    # windows  
+	# os.system('cls')
         
 def display_board(board):
-    clear()
-    print('   |   |')
-    print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
-    print('   |   |')
-    print('-----------')
-    print('   |   |')
-    print(' ' + board[4] + ' | ' + board[5] + ' | ' + board[6])
-    print('   |   |')
-    print('-----------')
-    print('   |   |')
-    print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
-    print('   |   |')
+    # clear screen before every update
+	clear()
+	print()
+	print('   |   |')
+	print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
+	print('   |   |')
+	print('-----------')
+	print('   |   |')
+	print(' ' + board[4] + ' | ' + board[5] + ' | ' + board[6])
+	print('   |   |')
+	print('-----------')
+	print('   |   |')
+	print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
+	print('   |   |')
+	print()
 
 
 def player_input():
@@ -64,7 +69,6 @@ def full_board_check(board):
     return True
 
 def player_choice(board):
-    # Using strings because of raw_input
     position = 0
     while position not in range(1,10) or not space_check(board, int(position)):
         
@@ -84,6 +88,7 @@ def game_loop():
         player1_marker, player2_marker = player_input()
         turn = choose_first()
         print(turn + ' will go first.')
+		# bool variable to check if the game still running
         game_on = True
     
         while game_on:
@@ -133,4 +138,8 @@ def game_loop():
             break
 
 
-game_loop()
+def main():
+	game_loop()
+
+if __name__ == "__main__":
+	main()
