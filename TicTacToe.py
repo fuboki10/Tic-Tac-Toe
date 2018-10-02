@@ -3,12 +3,12 @@ import os
 def clear(): 
   
 	# linux or os
-    os.system('clear') 
-    # windows  
+    	os.system('clear') 
+    	# windows  
 	# os.system('cls')
         
 def display_board(board):
-    # clear screen before every update
+    	# clear screen before every update
 	clear()
 	print()
 	print('   |   |')
